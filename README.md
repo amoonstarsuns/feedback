@@ -8,7 +8,7 @@ I will write here every single one of those amazing dudes and gals that have con
 - sshaw_
   https://www.shellcheck.net/
   
-  - ladrm 
+- ladrm 
   What you are doing wrong is craving human attention every time the script is run.
   Ideally scripts are non-interactive and should not require any interaction in form of "Do you want abc (y/n/maybe)". Especially on stdin - it should be used for     data input, command line arguments are used to modify behavior of the scritpt.
   Also questions of "do you really wanna do this" are sort of useless, since operator is saying to you that he wants to perform the action at the time the script is 
