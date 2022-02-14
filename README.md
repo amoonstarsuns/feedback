@@ -25,3 +25,31 @@ I will write here every single one of those amazing dudes and gals that have con
   read -p "Do you wish to count all files? [y/n]?" myvar
   [[ $myvar == "y" ]] && find ./ -type f -maxdepth 1 |wc -l || echo "content failed to start\!"
   ```
+  
+  - MaxxFlowDE 
+    To check $input, you could use "case" to make it more solid and intuitive
+```bash
+case ${input,,} in
+  y|j|yes|ja) 
+     echo "yes, let's do it..."
+     ...your code... 
+     ;;
+  *) 
+     echo not matched and maybe exit script or return function or whatever 
+      return 1
+     ;;
+esac
+```
+,, outputs the $input variable content lower case, so you only have to enter your matching cases in lower case.
+
+When using if and == and variable could be empty, prepend with something like "x".
+```bash
+if [ "x$input" == "xy" ] ; then
+```
+This may protect you from strange behavior when variable is empty.
+
+When using if with -eq , surround the variables with quotation marks to prevent bash syntax errors. (missing argument)
+```bash
+if [ "$number" -eq 0 ] ; then
+```
+Last tip: do not use ls. Use find instead, where possible.
