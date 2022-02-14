@@ -26,7 +26,7 @@ I will write here every single one of those amazing dudes and gals that have con
   [[ $myvar == "y" ]] && find ./ -type f -maxdepth 1 |wc -l || echo "content failed to start\!"
   ```
   
-  - MaxxFlowDE 
+- MaxxFlowDE 
     To check $input, you could use "case" to make it more solid and intuitive
 ```bash
 case ${input,,} in
